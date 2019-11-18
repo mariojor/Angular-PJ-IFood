@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Restaurant } from './restaurant/restaurant.model';
 import { RestaurantsService } from './restaurant.service';
 
@@ -8,7 +8,7 @@ import { RestaurantsService } from './restaurant.service';
 })
 export class RestaurantsComponent implements OnInit {
 
-  restaurants: Restaurant[];
+  @Input() restaurants: Restaurant[];
 
   constructor(private restaurantsService: RestaurantsService) { }
 

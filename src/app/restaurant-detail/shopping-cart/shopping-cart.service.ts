@@ -26,6 +26,7 @@ export class ShoppingCartService {
     }
 
     removeItem(item: CartItem) {
+        alert('entrou');
         this.items.splice(this.items.indexOf(item), 1);
         this.notificationService.notify(`Você removeu um item ${item.menuItem.name}`);
     }

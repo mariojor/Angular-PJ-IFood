@@ -4,11 +4,12 @@ import { OrderItemsComponent } from './order-items/order-items.component';
 import { DeliveryCostsComponent } from './delivery-costs/delivery-costs.component';
 import { SharedModule } from 'app/shared/shared.module';
 import { Routes, RouterModule } from '@angular/router';
+import { LeaveOrderGuard } from './leave-order.guard';
 
 
 // tslint:disable-next-line:no-unused-variable
 const ROUTES: Routes = [
-    {path: '', component: OrderComponent}
+    {path: '', component: OrderComponent, canDeactivate: [LeaveOrderGuard]}
 ];
 
 @NgModule({

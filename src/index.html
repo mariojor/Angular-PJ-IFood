@@ -6,7 +6,11 @@
   <title>Meat | Angular</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
+  <script>
+    if (global === undefined) {
+      var global = window;
+    }
+  </script>
 
   <title>Meat</title>
   <base href="/">
@@ -16,7 +20,7 @@
 </head>
 
 <body class="hold-transition skin-red layout-top-nav">
-
+<h1>Testando</h1>
     <mt-app>Loading...</mt-app>
 
 </body>
